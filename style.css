@@ -64,14 +64,10 @@
     height: 86vw;
     left: 0px;
     top: 0px;
-    background: linear-gradient(180deg, #143D6C 0%, #5b52c0 100%);
-  }
-  .solid-bg {
-    width: 100%;
-    height: 86vw;
-    left: 0px;
-    top: 0px;
-    background: #09181D;
+    background: linear-gradient(180deg, #143D6C, #4E5E96, #7a6281, #A98495);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
   }
   .circles {
     display: flex;
@@ -98,30 +94,44 @@
   }
   .navbar {
     z-index: 9;
-    display: flex;
-    background-color: #ffffff;
+    background-color: #143D6C;
     box-shadow: 1px 1px 10px #a9add9;
     height: 3.3vw;
-
+    overflow: hidden;
     position: sticky;
     top: 0px;
+    margin: 0;
+    padding: 0;
   }
+  ul {
+    position: absolute;
+    top:0.8vw;
+    left:20%;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
   .navbar li {
-    left: 15vw;
-    display: inline;
+    display:inline-block;
+    vertical-align: top;
     list-style-type: none;
     margin: 0vw 3vw 0vw 3vw;
     font-size: 1vw;
-    position: relative;
+    position:relative;
     border: 0.1vw solid white;
     border-radius: 9vw/10vw;
-    box-shadow: 1px 1px 5px #143D6C;
+    background-color: #143D6C;
+    box-shadow: 2px 2px 10px #0d233c;
     color:#eee;
   }
   .navbar li a {
+    display:inline-block;
     text-decoration:none;
-    color: #143D6C;
-    padding: 2vw;
+    color: white;
+    padding: 0 2vw 0 2vw;
   }
   .mountain {
     position:relative;
@@ -137,4 +147,31 @@
     top: 17vw;
     background: linear-gradient(180deg, #09181D 0%, #0b1c22 100%);
   }
+
+  /*bg keyframes*/
+  @keyframes gradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    20%{
+      background-position: 0% 0%;
+    }
+    60% {
+      background-position: 30% 30%;
+    }
+    80% {
+      background-position: 60% 60%;
+    }
+
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+body {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
 
