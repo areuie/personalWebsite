@@ -87,7 +87,6 @@
     filter: blur(20px);
   }
   .incircle1 {
-    scale: 10%;
     background: #FFFFFF;
     filter: blur(1px);
     margin-left: -100%;
