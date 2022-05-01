@@ -51,12 +51,12 @@
   }
   h1 {
     color: #FFD600;
-    font-size: 42px;
+    font-size: 2vw;
     text-align: center;
   }
   p, ol {
     color: #ffffff;
-    font-size: 18px;
+    font-size: 1vw;
     padding: 0px 20vw 0px 20vw;
   }
   .bg {
